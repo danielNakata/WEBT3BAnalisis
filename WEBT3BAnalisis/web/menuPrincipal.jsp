@@ -24,8 +24,7 @@
     <script type="text/javascript" src="jqueryui/jquery-ui.js"></script>    
     <script type="text/javascript" src="https://online.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script type="text/javascript" src="js/ftableau.js"></script>
-    <script type="text/javascript" >   
-        
+    <script type="text/javascript" > 
     </script>
   </head>
 
@@ -171,15 +170,15 @@
                   <div class="mr-5">Periodos</div>
                   <div class="container">
                         <div class="row">
-                            <div class='col-sm-6' id="fechaIni">
-                                Inicio <input type='text' class="form-control" id='fechaIni' name='fechaIni' />
+                            <div class='col-sm-6'>
+                                Inicio <input type='date' class="form-control" id='fechaIni' name='fechaIni' value="2017-01-01" onchange="afFechas()"/>
                             </div>
                         </div>
                     </div>
                   <div class="container">
                         <div class="row">
-                            <div class='col-sm-6' id="fechaFin">
-                                Fin <input type='text' class="form-control" id='fechaFin' name='fechaFin' />
+                            <div class='col-sm-6'>
+                                Fin <input type='date' class="form-control" id='fechaFin' name='fechaFin' value="2018-10-01"  onchange="afFechas()"/>
                             </div>
                         </div>
                     </div>

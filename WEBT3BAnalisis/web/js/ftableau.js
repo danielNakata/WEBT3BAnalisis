@@ -151,6 +151,25 @@ function afGrupoLinea(){
     }
 }
 
+function afFechas(){
+    var fechaIni = document.getElementById("fechaIni").value;
+    var fechaFin = document.getElementById("fechaFin").value;
+    
+    var sdiaini = parseInt(fechaIni.split("-")[2],10);
+    var smesini = parseInt(fechaIni.split("-")[1],10);
+    var saniini = parseInt(fechaIni.split("-")[0],10);
+    
+    var sdiafin = parseInt(fechaFin.split("-")[2],10);
+    var smesfin = parseInt(fechaFin.split("-")[1],10);
+    var sanifin = parseInt(fechaFin.split("-")[0],10);
+    
+    var hoja = viz.getWorkbook().getActiveSheet();
+    arrHojas = hoja.getWorksheets();
+    for(var y = 0; y < arrHojas.length; y++){
+        arrHojas[y].applyFilterAsync('Fecha', {min: new Date(Date.UTC(saniini, smesini, sdiaini)), max: new Date(Date.UTC(sanifin, smesfin, sdiafin))});
+    }
+}
+
 
 
 
