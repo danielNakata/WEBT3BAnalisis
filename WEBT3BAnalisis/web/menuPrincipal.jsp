@@ -147,17 +147,26 @@
                   <div class="card-body-icon">
                     <i class="fas fa-fw fa-list"></i>
                   </div>
+                  <div class="mr-5">Proveedor</div>
+                  <select id="cmbProveedor" name="cmbProveedor" class="form-control">
+                  </select>
                   <div class="mr-5">Grupo</div>
                   <select id="cmbGrupo" name="cmbGrupo" class="form-control" onclick="cargaLineasxGrupo(this.value)">
-                      
                   </select>
                   <div class="mr-5">Linea</div>
-                  <select id="cmbLinea" name="cmbLinea" class="form-control" onclick="afGrupoLinea()">
-                        
+                  <select id="cmbLinea" name="cmbLinea" class="form-control" onclick="afGrupoLinea()">     
                   </select>
-                   <div class="mr-5">Tipo Producto</div>
-                   <select id="cmbTipo" name="cmbTipo" class="form-control">
-                   </select>
+                  <div class="mr-5">Tipo de Productos</div>
+                  <table class="table">
+                      <tr>
+                          <td><input type="checkbox" value="MP" id="chkMP" name="chkMP" checked="true" onclick="checkTipoProd(this.id)" />MP</td>
+                          <td><input type="checkbox" value="MC" id="chkMC" name="chkMC" checked="true"  onclick="checkTipoProd(this.id)" />MC</td>
+                      </tr>
+                      <tr>
+                          <td><input type="checkbox" value="TP" id="chkTP" name="chkTP" checked="true"  onclick="checkTipoProd(this.id)" />TP</td>
+                          <td><input type="checkbox" value="IO" id="chkIO" name="chkIO" checked="true"  onclick="checkTipoProd(this.id)" />IO</td>
+                      </tr>
+                  </table> 
                 </div>
               </div>
             </div>

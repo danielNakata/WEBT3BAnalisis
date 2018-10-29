@@ -14,11 +14,11 @@ import java.util.Properties;
  * @author danie
  */
 public class Config {
-    public static String dbHost = "192.200.1.26";
+    public static String dbHost = "201.161.90.105";
     public static String dbPort = "2638";
     public static String dbUser = "dba";
-    public static String dbPass = "5575349";
-    public static String dbName = "master64";
+    public static String dbPass = "201809e";
+    public static String dbName = "Master64";
     public static String dbJdni = "";
     public static String dbUrl = "jdbc:sybase:Tds:";
     public static String dbDriver = "com.sybase.jdbc4.jdbc.SybDriver";
