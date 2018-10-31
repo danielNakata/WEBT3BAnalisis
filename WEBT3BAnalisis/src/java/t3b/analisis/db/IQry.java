@@ -19,4 +19,7 @@ public interface IQry {
     public static String TAL_CONSULTAESTADOARTICULOS    = " { call TAL_CONSULTAESTADOARTICULOS() } ";
     public static String TAL_CONSULTATIPOARTICULOS      = " { call TAL_CONSULTATIPOARTICULOS() } ";
     
+    public static String TAL_CONSULTADATOSUSUARIO       = " { call TAL_CONSULTADATOSUSUARIO(?) } ";
+    public static String TAL_INICIOSESION               = " { call TAL_INICIOSESION(?,?,?,?) } ";
+    
 }

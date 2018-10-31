@@ -24,6 +24,10 @@
         <servlet-name>ConsultaProductos</servlet-name>
         <servlet-class>t3b.analisis.srv.ConsultaProductos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InicioSesion</servlet-name>
+        <servlet-class>t3b.analisis.actions.InicioSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ConsultaGrupos</servlet-name>
         <url-pattern>/ConsultaGrupos</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>ConsultaProductos</servlet-name>
         <url-pattern>/ConsultaProductos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InicioSesion</servlet-name>
+        <url-pattern>/InicioSesion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
