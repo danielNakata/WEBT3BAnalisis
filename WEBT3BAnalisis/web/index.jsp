@@ -21,7 +21,7 @@
 
   <body>
     <div class="container">
-      <form class="form-signin">
+      <form class="form-signin" action="InicioSesion">
         <h2 class="form-signin-heading">T3B Analisis Compras</h2>
         <label for="inputEmail" class="sr-only">Usuario</label>
         <input type="text" id="txtUsuario" name="txtUsuario" class="form-control" placeholder="Usuario" required autofocus>

@@ -130,7 +130,7 @@ public class InicioSesion extends HttpServlet {
                                     
                                     try{
                                         String salidajson64 = Base64.encodeBase64String(salidaJSON.getBytes());
-                                        Cookie loginCoockie = new Cookie("cusuario", salidajson64 );
+                                        Cookie loginCoockie = new Cookie("t3blogisticausuario", salidajson64 );
                                         loginCoockie.setMaxAge(180*60);
                                         response.addCookie(loginCoockie);
                                         response.sendRedirect("menuPrincipal.jsp");

@@ -8,14 +8,19 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     String usuario = "";
+    boolean existe = false;
     Cookie[] cookies = request.getCookies();
     if(cookies != null){
         for(Cookie c : cookies){
-            if(c.getName().equals("cusuario")){
+            if(c.getName().equals("t3blogisticausuario")){
+                existe = true;
                 usuario = c.getValue();
                 usuario = Base64.base64Decode(usuario);
                 System.out.println("usuario decodificado: " + usuario);
             }               
+        }
+        if(!existe){
+            response.sendRedirect("index.jsp");
         }
     }else{
         response.sendRedirect("index.jsp");
