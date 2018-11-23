@@ -20,9 +20,10 @@
   </head>
 
   <body>
-    <div class="container">
+      <div class="container" style="height: auto; width: 60%; margin-left: 20%;">
       <form class="form-signin" action="InicioSesion">
-        <h2 class="form-signin-heading">T3B Analisis Compras</h2>
+        <img src="img/3B.png" style="width: 40%; height: 40%; margin-left: 30%;"/>
+        <h2 class="form-signin-heading">Analisis Compras</h2>
         <label for="inputEmail" class="sr-only">Usuario</label>
         <input type="text" id="txtUsuario" name="txtUsuario" class="form-control" placeholder="Usuario" required autofocus>
         <label for="inputPassword" class="sr-only">Contraseña</label>
@@ -32,7 +33,7 @@
             <input id="chkRecuerda" name="chkRecuerda" type="checkbox" value="1"> Recuerda
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+        <button class="btn btn-lg btn-primary2 btn-block" type="submit">Ingresar</button>
       </form>
     </div> 
   </body>

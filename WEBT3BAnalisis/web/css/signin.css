@@ -19,7 +19,7 @@ Esto no sube raios
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
+  background: #eee url('../img/proxy.duckduckgo.png') top left no-repeat ;
 }
 
 .form-signin {

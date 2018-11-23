@@ -240,6 +240,33 @@ function accionAgrupa() {
 
 }
 
+function cargaDashboardTableau2(paginaTableau, divgraficaRegion){
+    var ancho = obtieneMaxWidth();
+    var alto = obtieneMaxHeight();
+    ancho += 'px';
+    alto += 'px';
+    vizDiv = document.getElementById(divgraficaRegion);
+    vizURL = "https://us-west-2b.online.tableau.com/t/tiendas3b/views/20181018ComprasRegional_2/" + paginaTableau;
+    options = {
+        width: ancho
+        , height: alto
+        , hideToolbar: true
+        , hideTabs: true
+        , onFirstInteractive: function () {
+            woorkbook = viz.getWorkbook();
+        }
+        ,onLoad: function(){
+            actualizaFiltro();
+        }
+    };
+    try {
+        viz.dispose();
+    } catch (ex) {
+        console.log("excepcion en el dispose: " + ex.message);
+    }
+    viz = new tableauSoftware.Viz(vizDiv, vizURL, options);    
+}
+
 function cargaDashboardTableau(paginaTableau) {
     var ancho = obtieneMaxWidth();
     var alto = obtieneMaxHeight();
@@ -387,10 +414,14 @@ function cargaProveedores() {
     }
 }
 
+function dirigePag(url){
+    window.location = url;
+}
+
 /**
  * Esto lo carga siempre al inicio
  * @returns {undefined}
- */
+ *
 window.onload = function () {
     var ancho = obtieneMaxWidth();
     var alto = obtieneMaxHeight();
@@ -415,6 +446,7 @@ window.onload = function () {
     viz = new tableauSoftware.Viz(vizDiv, vizURL, options);
     cargaCatalogos();
 }
+    */
 
 /*Funciones de tableau*/
 function switchView(sheetName) {

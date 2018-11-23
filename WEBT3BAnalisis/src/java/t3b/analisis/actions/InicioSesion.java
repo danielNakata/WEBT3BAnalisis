@@ -89,7 +89,7 @@ public class InicioSesion extends HttpServlet {
                                 salidaJSON = "{\"res\":\"0\", \"msg\":\"NO SE PUDO OBTENER LAS COLUMNAS DE LA CONSULTA\"}";
                                 if (cols != null) {
                                     String filaaux = "";
-                                    for (HashMap<String, CampoDTO> fila : resp.getDatosTabla()) {
+                                    for (HashMap<String, CampoDTO> fila : resp2.getDatosTabla()) {
                                         filaaux = "";
                                         for (ColumnaDTO col : cols) {
                                             switch (col.getIdTipo()) {
@@ -137,7 +137,8 @@ public class InicioSesion extends HttpServlet {
                                     }catch(Exception ex){
                                         System.out.println("Excepcion en la coockie: " + ex.toString());
                                         ex.printStackTrace();
-                                        response.sendRedirect("index.jsp");
+                                        request.getSession().setAttribute("usuario", Base64.encodeBase64String(salidaJSON.getBytes()));
+                                        response.sendRedirect("menuPrincipal.jsp");
                                     }
                                 }
                             }
@@ -147,6 +148,7 @@ public class InicioSesion extends HttpServlet {
             }
         } catch (Exception ex) {
             salidaJSON = "{\"res\":\"0\", \"msg\":\"EXCEPCION GENERAL: " + ex.toString().replaceAll(",", "").replaceAll("\"", "").trim() + "\"}";
+            response.sendRedirect("index.jsp");
         } finally {
             out.write(salidaJSON);
             try {
